@@ -1,0 +1,56 @@
+{
+  "source": "https://thermodynesystems.com",
+  "total_products": 2,
+  "products": [
+    {
+      "handle": "arizer-solo-3",
+      "brand": "Thermodyne Systems",
+      "title": "Arizer Solo 3 Vaporizer",
+      "vendor": "Thermodyne Systems",
+      "product_type": "Hardware",
+      "tags": ["Vaporizer"],
+      "body_html": "<p>A premium vaporizer.</p>",
+      "options": [{"name": "Default", "values": ["Default Title"]}],
+      "in_stock_variants": [{
+          "variant_id": "SKU-123",
+          "sku": "SKU-123",
+          "option1_name": "Default",
+          "option1_value": "Default Title",
+          "price": 344.99,
+          "available": true,
+          "inventory_quantity": 10,
+          "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/placeholder/default/TH-logo_2.png"
+      }],
+      "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/placeholder/default/TH-logo_2.png"],
+      "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/placeholder/default/TH-logo_2.png",
+      "url": "https://thermodynesystems.com/wholesaler/us/vaporizers/portable-vaporizers/arizer-solo-3-vaporizer.html",
+      "min_price": 344.99,
+      "max_price": 344.99
+    },
+    {
+      "handle": "zeus-arc-gts",
+      "brand": "Accessories",
+      "title": "Zeus Arc GTS Hub",
+      "vendor": "Thermodyne Systems",
+      "product_type": "Accessories",
+      "tags": ["Accessories"],
+      "body_html": "<p>Vape accessory hub.</p>",
+      "options": [{"name": "Default", "values": ["Default Title"]}],
+      "in_stock_variants": [{
+          "variant_id": "SKU-456",
+          "sku": "SKU-456",
+          "option1_name": "Default",
+          "option1_value": "Default Title",
+          "price": 224.99,
+          "available": true,
+          "inventory_quantity": 10,
+          "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/placeholder/default/TH-logo_2.png"
+      }],
+      "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/placeholder/default/TH-logo_2.png"],
+      "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/placeholder/default/TH-logo_2.png",
+      "url": "https://thermodynesystems.com/wholesaler/us/vaporizers/portable-vaporizers/zeus-arc-gts.html",
+      "min_price": 224.99,
+      "max_price": 224.99
+    }
+  ]
+}

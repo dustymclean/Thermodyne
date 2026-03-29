@@ -311,11 +311,11 @@ def generate_site():
             <a href="{depth}index.html" class="sidebar-link">All Products</a>
         """
         
-        for brand in ["Thermodyne Systems"]:
+        for brand in ["Thermodyne Systems", "Accessories"]:
             if brand not in categories: continue
             html += f"""
             <div class="sidebar-section">{brand}</div>
-            <a href="{depth}{brand.lower()}.html" class="sidebar-link">Shop All {brand}</a>
+            <a href="{depth}{brand.lower().split()[0]}.html" class="sidebar-link">Shop All {brand}</a>
             """
             for cat in sorted(categories.get(brand, {}).keys()):
                 if not cat: continue
@@ -461,8 +461,8 @@ def generate_site():
                 
                 <select id="filter-brand" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; margin-right: 10px; font-size: 14px;">
                     <option value="all">All Brands</option>
-                    <option value="Portable Vaporizers">Portable Vaporizers</option>
-                    <option value="Desktop Vaporizers">Desktop Vaporizers</option>
+                    <option value="Accessories">Portable Vaporizers</option>
+                    <option value="Thermodyne Systems">Desktop Vaporizers</option>
                 </select>
                 <select id="filter-category" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; margin-right: 10px; font-size: 14px;">
                     <option value="all">All Categories</option>
@@ -556,7 +556,7 @@ def generate_site():
                     <li style="margin-bottom: 10px;"><strong>We Negotiate:</strong> We show distributors our engagement metrics.</li>
                     <li style="margin-bottom: 10px;"><strong>You Save:</strong> The discounts we secure are passed directly to you on the storefront.</li>
                 </ul>
-                <p>By simply joining the Discord, you are actively helping lower the cost of premium Desktop Vaporizers and Portable Vaporizers hardware for yourself and everyone else.</p>
+                <p>By simply joining the Discord, you are actively helping lower the cost of premium Thermodyne Systems and Accessories hardware for yourself and everyone else.</p>
                 <div style="margin-top: 40px; padding: 30px; background: #fafafa; border: 1px solid var(--border); border-radius: 12px; text-align: center;">
                     <h2 style="margin-top: 0;">Ready to lower prices?</h2>
                     <a href="https://discord.gg/dm8deA2u" target="_blank" class="btn" style="background: var(--gold); color: #000; font-size: 16px; padding: 15px 30px; margin-top: 15px;">Join the Mission on Discord</a>
@@ -616,9 +616,9 @@ def generate_site():
 
     # Write pages
     print("Generating pages...")
-    render_page("index.html", "Shop All", "Discover premium devices from Desktop Vaporizers and Portable Vaporizers.", products)
-    render_page("desktop.html", "Desktop Vaporizers", "Advanced vaporizers and accessories.", brands.get("Desktop Vaporizers", []))
-    render_page("portable.html", "Portable Vaporizers", "Silicone pipes and rigs.", brands.get("Portable Vaporizers", []))
+    render_page("index.html", "Shop All", "Discover premium devices from Thermodyne Systems and Accessories.", products)
+    render_page("thermodyne.html", "Thermodyne Systems", "Advanced vaporizers and accessories.", brands.get("Thermodyne Systems", []))
+    render_page("accessories.html", "Accessories", "Silicone pipes and rigs.", brands.get("Accessories", []))
     
     for brand, cats in categories.items():
         for cat, prods in cats.items():
@@ -710,8 +710,8 @@ def generate_site():
     
     # Build Sitemap & Robots
     sitemap_pages = ["index.html", "community.html", "login.html", "signup.html"]
-    if "desktop.html" in os.listdir(OUTPUT_DIR): sitemap_pages.append("desktop.html")
-    if "portable.html" in os.listdir(OUTPUT_DIR): sitemap_pages.append("portable.html")
+    if "thermodyne.html" in os.listdir(OUTPUT_DIR): sitemap_pages.append("thermodyne.html")
+    if "accessories.html" in os.listdir(OUTPUT_DIR): sitemap_pages.append("accessories.html")
     if os.path.exists(os.path.join(OUTPUT_DIR, "brands")):
         for f in os.listdir(os.path.join(OUTPUT_DIR, "brands")):
             if f.endswith(".html"): sitemap_pages.append(f"brands/{f}")
