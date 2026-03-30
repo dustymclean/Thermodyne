@@ -10,65 +10,54 @@ from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://thermodynesystems.com"
-LOGIN_URL = f"{BASE_URL}/wholesaler/us/customer/account/login/"
-EMAIL = "admin@pixies-pantry.com"
-PASSWORD = "New5432"
 
 OUTPUT_CSV = "Thermodyne_Products.csv"
 OUTPUT_JSON = "Thermodyne_Products.json"
 
 def slugify(text):
-    text = text.lower().strip()
+    text = str(text).lower().strip()
     text = re.sub(r'[^\w\s-]', '', text)
     text = re.sub(r'[\s_-]+', '-', text)
     return text
 
 def extract_price(text):
     if not text: return 0.0
-    text = text.replace('$', '').replace(',', '').strip()
+    text = text.replace('$', '').replace(',', '').replace('USD', '').strip()
     try: return float(text)
     except ValueError: return 0.0
 
 async def main():
-    print("=== Thermodyne Systems Click-Based Scraper ===")
+    print("=== Thermodyne Systems Grid Scraper ===")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         )
         page = await context.new_page()
 
-        print("1. Authenticating (Manual CAPTCHA Check)...")
-        await page.goto(LOGIN_URL)
-        await page.fill('input[name="login[username]"]', EMAIL)
-        await page.fill('input[name="login[password]"]', PASSWORD)
-        
-        print("\n⚠️ ACTION REQUIRED: Google reCAPTCHA Detected")
-        print("Please solve the CAPTCHA in the browser window and manually click 'Sign In'.")
-        print("The script will automatically resume once logged in.\n")
-        
-        while "login" in page.url or "inqueryPost" in page.url:
-            await asyncio.sleep(2)
-            
-        print(f"✅ Access Granted: Redirected to {page.url}")
-        
-        # We need to find all category links via the top navigation menu
-        print("2. Extracting Top Navigation Categories via Clicks...")
-        nav_elements = await page.query_selector_all('nav.navigation ul.ui-menu li.level0 > a')
-        nav_hrefs = []
-        for nav in nav_elements:
-            href = await nav.get_attribute('href')
-            if href and BASE_URL in href and href not in nav_hrefs:
-                nav_hrefs.append(href)
-                
-        print(f"Found {len(nav_hrefs)} top-level categories.")
+        print("Extracting Top Navigation Categories via Grid...")
+        nav_hrefs = [
+            "https://thermodynesystems.com/wholesaler/us/vapes.html",
+            "https://thermodynesystems.com/wholesaler/us/vapes/510-thread-batteries.html",
+            "https://thermodynesystems.com/wholesaler/us/vapes/vape-cartridges-and-parts.html",
+            "https://thermodynesystems.com/wholesaler/us/vaporizers.html",
+            "https://thermodynesystems.com/wholesaler/us/vaporizers/desktop-vaporizers.html",
+            "https://thermodynesystems.com/wholesaler/us/vaporizers/portable-vaporizers.html",
+            "https://thermodynesystems.com/wholesaler/us/vaporizers/vaporizer-parts.html",
+            "https://thermodynesystems.com/wholesaler/us/vaporizers/zeus-accessories.html",
+            "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html",
+            "https://thermodynesystems.com/wholesaler/us/wax-vaporizers/electric-dab-rigs.html",
+            "https://thermodynesystems.com/wholesaler/us/wax-vaporizers/vapor-cup.html",
+            "https://thermodynesystems.com/wholesaler/us/wax-vaporizers/wax-pen-parts.html",
+            "https://thermodynesystems.com/wholesaler/us/wax-vaporizers/wax-pens.html"
+        ]
         
         flat_products = []
         nested_products = []
         scraped_handles = set()
 
         for cat_href in nav_hrefs:
-            print(f"\n -> Clicking Category: {cat_href}")
+            print(f"\n -> Scanning Category: {cat_href}")
             try:
                 await page.goto(cat_href)
                 await page.wait_for_load_state("networkidle")
@@ -76,129 +65,119 @@ async def main():
                 print(f"    Failed to load category: {e}")
                 continue
 
+            # change show to all if possible
+            try:
+                limiter = await page.query_selector('select#limiter')
+                if limiter:
+                    await page.select_option('select#limiter', 'all')
+                    await page.wait_for_load_state("networkidle")
+                    await asyncio.sleep(2)
+            except:
+                pass
+
             page_num = 1
             while True:
                 print(f"    Scanning Grid (Page {page_num})...")
-                # Wait for products to load
-                await page.wait_for_selector('.product-item-info', state='attached', timeout=5000)
+                try:
+                    await page.wait_for_selector('li.item.product', state='attached', timeout=5000)
+                except:
+                    print("    No products found or timeout.")
+                    break
                 
                 # Get all product elements on this page
-                products = await page.query_selector_all('.product-item-info a.product-item-link, .product-item-photo')
+                html = await page.content()
+                soup = BeautifulSoup(html, 'html.parser')
+                products = soup.select('li.item.product')
                 
-                product_hrefs = []
+                print(f"    Found {len(products)} products on this page.")
+                
                 for p in products:
-                    href = await p.get_attribute('href')
-                    if href and href not in product_hrefs:
-                        product_hrefs.append(href)
+                    name_el = p.select_one('.product-item-name')
+                    if not name_el: continue
+                    title = name_el.text.strip().replace('\n', ' ')
+                    handle = slugify(title)
+                    
+                    if handle in scraped_handles:
+                        continue
                         
-                print(f"    Found {len(product_hrefs)} products to click on this page.")
-                
-                for phref in product_hrefs:
-                    try:
-                        # Open product in a new tab via middle-click to preserve grid pagination
-                        async with context.expect_page() as new_page_info:
-                            el = await page.query_selector(f'a[href="{phref}"]')
-                            if el:
-                                await el.click(modifiers=["Meta"] if os.uname().sysname == 'Darwin' else ["Control"])
-                            else:
-                                continue
-                                
-                        new_page = await new_page_info.value
-                        await new_page.wait_for_load_state("networkidle")
-                        await asyncio.sleep(2)  # Delay to not get blocked
+                    price_el = p.select_one('.price')
+                    price = extract_price(price_el.text) if price_el else 0.0
+                    
+                    img_el = p.select_one('img.product-image-photo')
+                    img_src = img_el.get('data-original') or img_el.get('src') if img_el else ''
+                    
+                    # check availability
+                    unavailable = p.select_one('.stock.unavailable')
+                    in_stock = not bool(unavailable)
+                    inventory_qty = 10 if in_stock else 0
+                    
+                    if not in_stock:
+                        continue
                         
-                        html = await new_page.content()
-                        soup = BeautifulSoup(html, 'html.parser')
-                        
-                        title_el = soup.select_one('h1.page-title span, h1.page-title')
-                        title = title_el.text.strip().replace('\n', ' ') if title_el else "Unknown"
-                        handle = slugify(title)
-                        
-                        if handle in scraped_handles:
-                            await new_page.close()
-                            continue
-                        scraped_handles.add(handle)
-                        
-                        sku_el = soup.select_one('.product.attribute.sku .value, .sku .value, div[itemprop="sku"]')
-                        sku = sku_el.text.strip().replace('\n', '') if sku_el else ''
-                        
-                        price_el = soup.select_one('.price-wrapper .price, .special-price .price, .normal-price .price')
-                        price = extract_price(price_el.text) if price_el else 0.0
-                        
-                        desc_el = soup.select_one('.product.attribute.description .value, #description')
-                        body_html = str(desc_el) if desc_el else ''
-                        
-                        images = []
-                        for img in soup.select('.gallery-placeholder img, .fotorama__img'):
-                            src = img.get('src')
-                            if src and src not in images: images.append(src)
-                                
-                        variant_image = images[0] if images else ''
-                        
-                        stock_el = soup.select_one('.stock.available')
-                        in_stock = bool(stock_el)
-                        inventory_qty = 10 if in_stock else 0
-                        
-                        brand_el = soup.select_one('.product.attribute.brand .value')
-                        brand = brand_el.text.strip() if brand_el else "Thermodyne Systems"
-                        
-                        print(f"      Scraped: {title} (${price})")
-                        
-                        if in_stock:
-                            flat_products.append({
-                                "Handle": handle,
-                                "Brand": brand,
-                                "Title": title,
-                                "Vendor": brand,
-                                "Product Type": "Hardware",
-                                "Tags": "Vaporizer",
-                                "Body (HTML)": body_html,
-                                "Option1 Name": "Default",
-                                "Option1 Value": "Default Title",
-                                "Option2 Name": "",
-                                "Option2 Value": "",
-                                "Option3 Name": "",
-                                "Option3 Value": "",
-                                "Variant SKU": sku,
-                                "Variant Price": price,
-                                "Compare At Price": price,
-                                "Inventory Quantity": inventory_qty,
-                                "Variant Image": variant_image,
-                                "Featured Image": variant_image,
-                                "All Images": " | ".join(images),
-                                "Published At": datetime.now().isoformat(),
-                                "Product URL": phref,
-                            })
-                            
-                            nested_products.append({
-                                "handle": handle,
-                                "brand": brand,
-                                "title": title,
-                                "vendor": brand,
-                                "product_type": "Hardware",
-                                "tags": ["Vaporizer"],
-                                "body_html": body_html,
-                                "options": [{"name": "Default", "values": ["Default Title"]}],
-                                "in_stock_variants": [{
-                                    "variant_id": sku,
-                                    "sku": sku,
-                                    "option1_name": "Default",
-                                    "option1_value": "Default Title",
-                                    "price": price,
-                                    "available": True,
-                                    "inventory_quantity": inventory_qty,
-                                    "variant_image": variant_image
-                                }],
-                                "all_images": images,
-                                "featured_image": variant_image,
-                                "url": phref,
-                                "min_price": price,
-                                "max_price": price
-                            })
-                        
-                        await new_page.close()
-                    except Exception as e:
-                        print(f"      Error on {phref}: {e}")
+                    scraped_handles.add(handle)
+                    
+                    # infer brand from title
+                    brand = "Thermodyne Systems"
+                    if "utillian" in title.lower(): brand = "Utillian"
+                    elif "zeus" in title.lower(): brand = "Zeus"
+                    elif "puffco" in title.lower(): brand = "Puffco"
+                    elif "yocan" in title.lower(): brand = "Yocan"
+                    elif "lookah" in title.lower(): brand = "Lookah"
+                    elif "linx" in title.lower(): brand = "Linx"
+                    elif "tronian" in title.lower(): brand = "Tronian"
+                    
+                    print(f"      Scraped: {title} (${price})")
+                    
+                    flat_products.append({
+                        "Handle": handle,
+                        "Brand": brand,
+                        "Title": title,
+                        "Vendor": brand,
+                        "Product Type": "Hardware",
+                        "Tags": "Vaporizer",
+                        "Body (HTML)": "",
+                        "Option1 Name": "Default",
+                        "Option1 Value": "Default Title",
+                        "Option2 Name": "",
+                        "Option2 Value": "",
+                        "Option3 Name": "",
+                        "Option3 Value": "",
+                        "Variant SKU": handle,
+                        "Variant Price": price,
+                        "Compare At Price": price,
+                        "Inventory Quantity": inventory_qty,
+                        "Variant Image": img_src,
+                        "Featured Image": img_src,
+                        "All Images": img_src,
+                        "Published At": datetime.now().isoformat(),
+                        "Product URL": cat_href,
+                    })
+                    
+                    nested_products.append({
+                        "handle": handle,
+                        "brand": brand,
+                        "title": title,
+                        "vendor": brand,
+                        "product_type": "Hardware",
+                        "tags": ["Vaporizer"],
+                        "body_html": "",
+                        "options": [{"name": "Default", "values": ["Default Title"]}],
+                        "in_stock_variants": [{
+                            "variant_id": handle,
+                            "sku": handle,
+                            "option1_name": "Default",
+                            "option1_value": "Default Title",
+                            "price": price,
+                            "available": True,
+                            "inventory_quantity": inventory_qty,
+                            "variant_image": img_src
+                        }],
+                        "all_images": [img_src] if img_src else [],
+                        "featured_image": img_src,
+                        "url": cat_href,
+                        "min_price": price,
+                        "max_price": price
+                    })
                         
                 # Check for pagination (Next Page button)
                 next_btn = await page.query_selector('.action.next')
