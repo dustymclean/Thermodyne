@@ -9,7 +9,8 @@
       "vendor": "Tronian",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -47,7 +48,8 @@
       "vendor": "Zeus",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -80,12 +82,13 @@
     },
     {
       "handle": "litl-sneaky-case-5-qty",
-      "brand": "Thermodyne Systems",
+      "brand": "LITL",
       "title": "LITL Sneaky Case, 5 QTY",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "LITL",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -121,9 +124,10 @@
       "brand": "Tronian",
       "title": "Tronian Rhotron Pro Case, 25 QTY (Varied Colors)",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -161,7 +165,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -197,9 +202,10 @@
       "brand": "Tronian",
       "title": "Tronian Nutron Case, 35 QTY (Varied Colors)",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -235,9 +241,10 @@
       "brand": "Tronian",
       "title": "Tronian Pitron Case, 35 QTY (Varied Colors)",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -273,9 +280,10 @@
       "brand": "Tronian",
       "title": "Tronian Rhotron Case, 15 QTY",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -311,9 +319,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar 510 DL Pipe",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "510 Batteries & Carts",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "510 Batteries & Carts"
       ],
       "body_html": "",
       "options": [
@@ -349,9 +358,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar 510 DL 2.0 Pro",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "510 Batteries & Carts",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "510 Batteries & Carts"
       ],
       "body_html": "",
       "options": [
@@ -387,9 +397,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar DuploCart H2O Vaporizer",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "510 Batteries & Carts",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "510 Batteries & Carts"
       ],
       "body_html": "",
       "options": [
@@ -427,7 +438,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -465,7 +477,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -503,7 +516,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -541,7 +555,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -579,7 +594,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -617,7 +633,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -655,7 +672,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -693,7 +711,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -731,7 +750,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -769,7 +789,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -807,7 +828,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -845,7 +867,8 @@
       "vendor": "Yocan",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -883,7 +906,8 @@
       "vendor": "Thermodyne Systems",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -921,7 +945,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -959,7 +984,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -997,7 +1023,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -1035,7 +1062,8 @@
       "vendor": "Lookah",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -1073,7 +1101,8 @@
       "vendor": "Yocan",
       "product_type": "Hardware",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Hardware"
       ],
       "body_html": "",
       "options": [
@@ -1109,9 +1138,10 @@
       "brand": "Utillian",
       "title": "Utillian 50 - 510 Magnetic Adaptor Set",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -1147,9 +1177,10 @@
       "brand": "Yocan",
       "title": "Yocan HIT 2",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1185,9 +1216,10 @@
       "brand": "Yocan",
       "title": "Yocan Vane 2",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1223,9 +1255,10 @@
       "brand": "Thermodyne Systems",
       "title": "DynaVap the G3",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1261,9 +1294,10 @@
       "brand": "Thermodyne Systems",
       "title": "XMax V3 Nano",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1299,9 +1333,10 @@
       "brand": "Thermodyne Systems",
       "title": "AirVape XS GO",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1337,9 +1372,10 @@
       "brand": "Thermodyne Systems",
       "title": "DynaVap the B2",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1375,9 +1411,10 @@
       "brand": "Thermodyne Systems",
       "title": "XMax Starry 4 Vaporizer",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1413,9 +1450,10 @@
       "brand": "Thermodyne Systems",
       "title": "Flowermate Slick",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1451,9 +1489,10 @@
       "brand": "Thermodyne Systems",
       "title": "XMax V3 Pro Vaporizer",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1486,12 +1525,13 @@
     },
     {
       "handle": "arizer-air-se",
-      "brand": "Thermodyne Systems",
+      "brand": "Arizer",
       "title": "Arizer Air SE",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Arizer",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1527,9 +1567,10 @@
       "brand": "Thermodyne Systems",
       "title": "Flowermate V5 Nano",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1562,12 +1603,13 @@
     },
     {
       "handle": "arizer-v-tower",
-      "brand": "Thermodyne Systems",
+      "brand": "Arizer",
       "title": "Arizer V-Tower",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Arizer",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1603,9 +1645,10 @@
       "brand": "Thermodyne Systems",
       "title": "Dynavap M7",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1641,9 +1684,10 @@
       "brand": "Thermodyne Systems",
       "title": "XMax V4 Pro",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1679,9 +1723,10 @@
       "brand": "Tronian",
       "title": "Tronian Milatron",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1717,9 +1762,10 @@
       "brand": "Thermodyne Systems",
       "title": "XVape Fog Pro",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1755,9 +1801,10 @@
       "brand": "Thermodyne Systems",
       "title": "DynaVap M7 XL",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1793,9 +1840,10 @@
       "brand": "Utillian",
       "title": "Utillian 621",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1831,9 +1879,10 @@
       "brand": "Linx",
       "title": "Linx Gaia",
       "vendor": "Linx",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1869,9 +1918,10 @@
       "brand": "Utillian",
       "title": "Utillian 723",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1907,9 +1957,10 @@
       "brand": "Thermodyne Systems",
       "title": "DynaVap the UniDyn",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1945,9 +1996,10 @@
       "brand": "Zeus",
       "title": "Zeus Arc S2",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -1983,9 +2035,10 @@
       "brand": "Thermodyne Systems",
       "title": "AirVape Legacy Core",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2021,9 +2074,10 @@
       "brand": "Thermodyne Systems",
       "title": "Dynavap The Woodwynd",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2056,12 +2110,13 @@
     },
     {
       "handle": "pax-plus-vaporizer",
-      "brand": "Thermodyne Systems",
+      "brand": "PAX",
       "title": "Pax Plus Vaporizer",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "PAX",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2094,12 +2149,13 @@
     },
     {
       "handle": "arizer-air-max-vaporizer",
-      "brand": "Thermodyne Systems",
+      "brand": "Arizer",
       "title": "Arizer Air Max Vaporizer",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Arizer",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2135,9 +2191,10 @@
       "brand": "Thermodyne Systems",
       "title": "AirVape Legacy Pro",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2170,12 +2227,13 @@
     },
     {
       "handle": "focus-v-aeris",
-      "brand": "Thermodyne Systems",
+      "brand": "Focus V",
       "title": "Focus V Aeris",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Focus V",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2211,9 +2269,10 @@
       "brand": "Zeus",
       "title": "Zeus Arc GT4",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2246,12 +2305,13 @@
     },
     {
       "handle": "arizer-solo-3-v2-vaporizer",
-      "brand": "Thermodyne Systems",
+      "brand": "Arizer",
       "title": "Arizer Solo 3 V2 Vaporizer",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Arizer",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2284,12 +2344,13 @@
     },
     {
       "handle": "pax-4",
-      "brand": "Thermodyne Systems",
+      "brand": "PAX",
       "title": "Pax 4",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "PAX",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2325,9 +2386,10 @@
       "brand": "Thermodyne Systems",
       "title": "Plenty",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2363,9 +2425,10 @@
       "brand": "Thermodyne Systems",
       "title": "Veazy Vaporizer",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2401,9 +2464,10 @@
       "brand": "Thermodyne Systems",
       "title": "Crafty+ 2021",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2436,12 +2500,13 @@
     },
     {
       "handle": "pax-flow",
-      "brand": "Thermodyne Systems",
+      "brand": "PAX",
       "title": "Pax Flow",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "PAX",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2477,9 +2542,10 @@
       "brand": "Thermodyne Systems",
       "title": "Venty Vaporizer",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2515,9 +2581,10 @@
       "brand": "Thermodyne Systems",
       "title": "Mighty Plus Vaporizer",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Dry Herb Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Dry Herb Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2550,12 +2617,13 @@
     },
     {
       "handle": "volcano-hybrid-vaporizer",
-      "brand": "Thermodyne Systems",
+      "brand": "Storz & Bickel",
       "title": "Volcano Hybrid Vaporizer",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Storz & Bickel",
+      "product_type": "Desktop Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Desktop Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2588,12 +2656,13 @@
     },
     {
       "handle": "classic-volcano",
-      "brand": "Thermodyne Systems",
+      "brand": "Storz & Bickel",
       "title": "Classic Volcano",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Storz & Bickel",
+      "product_type": "Desktop Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Desktop Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2629,9 +2698,10 @@
       "brand": "Thermodyne Systems",
       "title": "AirVape Enso",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Desktop Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Desktop Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -2667,9 +2737,10 @@
       "brand": "Zeus",
       "title": "Flow Sink Tool - Zeus Arc",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2705,9 +2776,10 @@
       "brand": "Thermodyne Systems",
       "title": "Glass Mouthpiece - V Tower & Extreme Q",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2743,9 +2815,10 @@
       "brand": "Thermodyne Systems",
       "title": "Flowermate V5 Nano Glass Mouthpiece",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2781,9 +2854,10 @@
       "brand": "Tronian",
       "title": "Tronian Milatron Screens",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2819,9 +2893,10 @@
       "brand": "Thermodyne Systems",
       "title": "Screen Pack - V tower & Extreme Q",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2857,9 +2932,10 @@
       "brand": "Utillian",
       "title": "Utillian 620 Screen Pack",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2892,12 +2968,13 @@
     },
     {
       "handle": "frosted-glass-balloon-mouthpiece-arizer-extreme-q",
-      "brand": "Thermodyne Systems",
+      "brand": "Arizer",
       "title": "Frosted Glass Balloon Mouthpiece – Arizer Extreme Q",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Arizer",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2933,9 +3010,10 @@
       "brand": "Utillian",
       "title": "Care Package - Utillian 721/722",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -2971,9 +3049,10 @@
       "brand": "Thermodyne Systems",
       "title": "Flowermate Slick Glass Mouthpiece",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3009,9 +3088,10 @@
       "brand": "Thermodyne Systems",
       "title": "Dome Screen Pack - VT, EQ, XQ2",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3047,9 +3127,10 @@
       "brand": "Zeus",
       "title": "Zeus Iceborn 3",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3085,9 +3166,10 @@
       "brand": "Zeus",
       "title": "Zeus ArcPods Lid Pack",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3123,9 +3205,10 @@
       "brand": "Zeus",
       "title": "Zeus ArcPods (Triple Pack)",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3161,9 +3244,10 @@
       "brand": "Zeus",
       "title": "ZEUS Purify™ Cleaning Kit",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3199,9 +3283,10 @@
       "brand": "Zeus",
       "title": "Zeus Arcpods Case",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3237,9 +3322,10 @@
       "brand": "Zeus",
       "title": "Zeus WaxPods GT",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3275,9 +3361,10 @@
       "brand": "Zeus",
       "title": "Zeus WaxPods",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3313,9 +3400,10 @@
       "brand": "Zeus",
       "title": "Zeus Iceborn 3 Glass Mouthpiece",
       "vendor": "Zeus",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -3351,9 +3439,10 @@
       "brand": "Tronian",
       "title": "Tronian Gammatron",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3389,9 +3478,10 @@
       "brand": "Utillian",
       "title": "Utillian 5 V4",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3424,12 +3514,13 @@
     },
     {
       "handle": "dr-dabber-xs",
-      "brand": "Thermodyne Systems",
+      "brand": "Dr. Dabber",
       "title": "Dr. Dabber XS",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Dr. Dabber",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3465,9 +3556,10 @@
       "brand": "Thermodyne Systems",
       "title": "Ispure Daab Kit E Rig",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "E-Rigs",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "E-Rigs"
       ],
       "body_html": "",
       "options": [
@@ -3500,12 +3592,13 @@
     },
     {
       "handle": "dr-dabber-switch-2",
-      "brand": "Thermodyne Systems",
+      "brand": "Dr. Dabber",
       "title": "Dr. Dabber Switch 2",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Dr. Dabber",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3538,12 +3631,13 @@
     },
     {
       "handle": "focus-v-carta-sport",
-      "brand": "Thermodyne Systems",
+      "brand": "Focus V",
       "title": "Focus V Carta Sport",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Focus V",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3579,9 +3673,10 @@
       "brand": "Linx",
       "title": "Linx Blaze Kit",
       "vendor": "Linx",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3614,12 +3709,13 @@
     },
     {
       "handle": "dr-dabber-ghost-2",
-      "brand": "Thermodyne Systems",
+      "brand": "Dr. Dabber",
       "title": "Dr. Dabber Ghost 2",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Dr. Dabber",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3655,9 +3751,10 @@
       "brand": "Thermodyne Systems",
       "title": "BOMB ERIG Magloud",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "E-Rigs",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "E-Rigs"
       ],
       "body_html": "",
       "options": [
@@ -3693,9 +3790,10 @@
       "brand": "Lookah",
       "title": "Lookah Unicorn Mini",
       "vendor": "Lookah",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3731,9 +3829,10 @@
       "brand": "Puffco",
       "title": "New Puffco Peak",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3769,9 +3868,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar APX Wax V3",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3807,9 +3907,10 @@
       "brand": "Puffco",
       "title": "Puffco Pivot",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3845,9 +3946,10 @@
       "brand": "Yocan",
       "title": "Yocan Black Pocket",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3883,9 +3985,10 @@
       "brand": "Lookah",
       "title": "Lookah Q7 Mini",
       "vendor": "Lookah",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3921,9 +4024,10 @@
       "brand": "Yocan",
       "title": "Yocan Cylo",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3959,9 +4063,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar RoK",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -3997,9 +4102,10 @@
       "brand": "Thermodyne Systems",
       "title": "Crossing TUG 2.0 E Rig",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "E-Rigs",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "E-Rigs"
       ],
       "body_html": "",
       "options": [
@@ -4035,9 +4141,10 @@
       "brand": "Lookah",
       "title": "Lookah Ant",
       "vendor": "Lookah",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4073,9 +4180,10 @@
       "brand": "Lookah",
       "title": "Lookah Dinosaur",
       "vendor": "Lookah",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4111,9 +4219,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar Dabtron 2.0",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4149,9 +4258,10 @@
       "brand": "Thermodyne Systems",
       "title": "The Core 2.1",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4187,9 +4297,10 @@
       "brand": "Lookah",
       "title": "Lookah Dragon Egg",
       "vendor": "Lookah",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4225,9 +4336,10 @@
       "brand": "Yocan",
       "title": "Yocan iCan",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4263,9 +4375,10 @@
       "brand": "Yocan",
       "title": "Yocan Nestor",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4301,9 +4414,10 @@
       "brand": "Yocan",
       "title": "Yocan Evolve Plus XL Vaporizer",
       "vendor": "Yocan",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4339,9 +4453,10 @@
       "brand": "Lookah",
       "title": "Lookah Seahorse Pro Plus",
       "vendor": "Lookah",
-      "product_type": "Hardware",
+      "product_type": "Wax Vaporizers",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Vaporizers"
       ],
       "body_html": "",
       "options": [
@@ -4377,9 +4492,10 @@
       "brand": "Utillian",
       "title": "Utillian 8 V2",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "E-Rigs",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "E-Rigs"
       ],
       "body_html": "",
       "options": [
@@ -4415,9 +4531,10 @@
       "brand": "Puffco",
       "title": "New Puffco Peak Pro 3DXL",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "E-Rigs",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "E-Rigs"
       ],
       "body_html": "",
       "options": [
@@ -4453,9 +4570,10 @@
       "brand": "Utillian",
       "title": "Utillian Hot Wax Axe",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4491,9 +4609,10 @@
       "brand": "Utillian",
       "title": "Utillian 8 Ruby Pearl Pack",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4529,9 +4648,10 @@
       "brand": "Tronian",
       "title": "Tronian Omegatron Glass Cup",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4567,9 +4687,10 @@
       "brand": "Tronian",
       "title": "Tronian Omegatron Glass Core Heating Element Pack",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4605,9 +4726,10 @@
       "brand": "Tronian",
       "title": "Tronian Omegatron Triple Helix Heating Element Pack",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4643,9 +4765,10 @@
       "brand": "Tronian",
       "title": "Tronian Omegatron Heating Element Cover",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4681,9 +4804,10 @@
       "brand": "Utillian",
       "title": "Utillian 5 Heating Chamber",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4719,9 +4843,10 @@
       "brand": "Utillian",
       "title": "Utillian 6 Glass Mouthpiece",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4757,9 +4882,10 @@
       "brand": "Utillian",
       "title": "Utillian 6 Heating Element Pack",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4795,9 +4921,10 @@
       "brand": "Utillian",
       "title": "Utillian 6 Extended Mouthpiece",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4833,9 +4960,10 @@
       "brand": "Utillian",
       "title": "Utillian Ruby Pearl Pack - 5 mm",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4871,9 +4999,10 @@
       "brand": "Utillian",
       "title": "Utillian 5 Mouthpiece",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4909,9 +5038,10 @@
       "brand": "Tronian",
       "title": "Tronian GammaTron Mouthpiece",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4947,9 +5077,10 @@
       "brand": "Tronian",
       "title": "Tronian Gammatron Kanthal Heating Element Pack",
       "vendor": "Tronian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -4985,9 +5116,10 @@
       "brand": "Utillian",
       "title": "Utillian 8 Glass Mouthpiece",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5023,9 +5155,10 @@
       "brand": "Utillian",
       "title": "Utillian 8 Multi-Tool",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5061,9 +5194,10 @@
       "brand": "Utillian",
       "title": "Utillian 2 Glass Mouthpiece",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5099,9 +5233,10 @@
       "brand": "Utillian",
       "title": "Utillian 8 BurstHit 3D Heating Element",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5137,9 +5272,10 @@
       "brand": "Utillian",
       "title": "Replacement Coils (2 Pack) - Utillian 5",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5175,9 +5311,10 @@
       "brand": "Utillian",
       "title": "Utillian Glass Bubbler",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5213,9 +5350,10 @@
       "brand": "Thermodyne Systems",
       "title": "Core Side Mouthpiece Glass Bubbler (1.0/2.1)",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5251,9 +5389,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar APX Wax V3 Triple Quartz Heating Element",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5289,9 +5428,10 @@
       "brand": "Linx",
       "title": "Linx Ember Atomizer",
       "vendor": "Linx",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5324,12 +5464,13 @@
     },
     {
       "handle": "dr-dabber-xs-replacement-e-chamber",
-      "brand": "Thermodyne Systems",
+      "brand": "Dr. Dabber",
       "title": "Dr. Dabber XS Replacement E-Chamber",
-      "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "vendor": "Dr. Dabber",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5365,9 +5506,10 @@
       "brand": "Puffco",
       "title": "Puffco Peak Pro Glass 2.0",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5403,9 +5545,10 @@
       "brand": "Thermodyne Systems",
       "title": "Ryan Fitt Recycler Glass",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5441,9 +5584,10 @@
       "brand": "Thermodyne Systems",
       "title": "Xmax Qomo Quartz Heating Coil",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5479,9 +5623,10 @@
       "brand": "Puffco",
       "title": "Puffco Peak 3D Chamber",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5517,9 +5662,10 @@
       "brand": "Thermodyne Systems",
       "title": "Pulsar APX Wax V3 Barb Coil Heating Element",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5555,9 +5701,10 @@
       "brand": "Thermodyne Systems",
       "title": "Crossing Core Recycler Bubbler",
       "vendor": "Thermodyne Systems",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5593,9 +5740,10 @@
       "brand": "Puffco",
       "title": "Puffco Proxy Wizard",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5631,9 +5779,10 @@
       "brand": "Puffco",
       "title": "Puffco Travel Glass",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Parts & Accessories",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Parts & Accessories"
       ],
       "body_html": "",
       "options": [
@@ -5669,9 +5818,10 @@
       "brand": "Utillian",
       "title": "Utillian 6 Dab Pen",
       "vendor": "Utillian",
-      "product_type": "Hardware",
+      "product_type": "Wax Pens",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Pens"
       ],
       "body_html": "",
       "options": [
@@ -5707,9 +5857,10 @@
       "brand": "Puffco",
       "title": "New Puffco Proxy",
       "vendor": "Puffco",
-      "product_type": "Hardware",
+      "product_type": "Wax Pens",
       "tags": [
-        "Vaporizer"
+        "Vaporizer",
+        "Wax Pens"
       ],
       "body_html": "",
       "options": [

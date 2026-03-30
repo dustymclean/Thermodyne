@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             try {
-                const res = await fetch("https://discord.com/api/webhooks/1485760760939417811/p9gAtkJd3-Rw64TlaQK0FjbDrFHPRWq32pcEcl_ZghQ7qa17vnFZsJr3thAjO__xRosE", {
+                const res = await fetch("https://discord.com/api/webhooks/1488164853674676345/jkPB7BJL1feAxLN3dYq_8-tdaxBF5n6YD5xuk_tCtgyZ9oY4waY3lX3GWRy5rqErbQ8T", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(payload)
