@@ -130,24 +130,55 @@
 
         <!-- Product Modal -->
         <div class="modal-overlay" id="modal-overlay">
-            <div class="modal">
-                <button class="modal-close" id="modal-close">&times;</button>
-                <div class="modal-left">
-                    <img src="" alt="Product" class="modal-main-img" id="m-img">
+            <div class="modal" style="max-width: 900px; padding:0; overflow:hidden;">
+                <button class="modal-close" id="modal-close" style="position:absolute; right:15px; top:15px; font-size:24px; background:none; border:none; cursor:pointer; z-index:100;">&times;</button>
+                <div class="modal-left" style="flex: 1.2; padding: 30px; border-right: 1px solid var(--border); background:#fdfdfd;">
+                    <div class="modal-gallery-main">
+                        <img src="" alt="Product" class="modal-main-img" id="m-img" style="height: 400px; width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="modal-gallery-thumbs" id="m-thumbs" style="display: flex; gap: 10px; margin-top: 15px; overflow-x: auto; padding-bottom: 5px;">
+                        <!-- Thumbnails injected here -->
+                    </div>
                 </div>
-                <div class="modal-right">
-                    <div class="modal-brand" id="m-brand">Brand</div>
-                    <h2 class="modal-title" id="m-title">Product Name</h2>
-                    <div class="modal-price" id="m-price">$0.00</div>
-                    <div class="modal-desc" id="m-desc"></div>
+                <div class="modal-right" style="flex: 1.3; padding: 30px; display:flex; flex-direction:column; max-height:80vh; overflow-y:auto;">
+                    <div class="modal-brand" id="m-brand" style="font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 5px;">Brand</div>
+                    <h2 class="modal-title" id="m-title" style="margin: 0 0 10px; font-size: 26px;">Product Name</h2>
+                    <div class="modal-price" id="m-price" style="font-size: 22px; font-weight: bold; color: var(--gold); margin-bottom: 20px;">$0.00</div>
                     
-                    <div class="variant-label" id="v-label">Options</div>
-                    <div class="swatch-group" id="swatches"></div>
+                    <div class="modal-tabs" style="display: flex; gap: 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px;">
+                        <span class="tab-link active" onclick="switchTab('desc', this)" style="cursor: pointer; font-weight: bold; border-bottom: 2px solid var(--gold); padding-bottom:8px; font-size:14px; text-transform:uppercase;">Details</span>
+                        <span class="tab-link" onclick="switchTab('specs', this)" style="cursor: pointer; font-weight: bold; padding-bottom:8px; font-size:14px; text-transform:uppercase;">Specs</span>
+                        <span class="tab-link" onclick="switchTab('resources', this)" style="cursor: pointer; font-weight: bold; padding-bottom:8px; font-size:14px; text-transform:uppercase;">Resources</span>
+                    </div>
                     
-                    <button class="btn modal-buy-btn" id="add-to-cart-btn">Add to Cart</button>
+                    <div class="tab-content" id="tab-desc" style="display: block; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div class="modal-desc" id="m-desc"></div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-specs" style="display: none; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div id="m-specs">No specifications available.</div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-resources" style="display: none; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div id="m-resources">No downloadable resources available.</div>
+                    </div>
+                    
+                    <div class="variant-label" id="v-label" style="font-weight:bold; font-size:12px; text-transform:uppercase; margin-bottom:10px;">Options</div>
+                    <div class="swatch-group" id="swatches" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;"></div>
+                    
+                    <button class="btn modal-buy-btn" id="add-to-cart-btn" style="width: 100%; padding: 15px; font-size: 16px; margin-top:auto;">Add to Cart</button>
                 </div>
             </div>
         </div>
+        
+        <script>
+            function switchTab(tabId, el) {
+                document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+                document.querySelectorAll('.tab-link').forEach(t => t.style.borderBottom = 'none');
+                document.getElementById('tab-' + tabId).style.display = 'block';
+                el.style.borderBottom = '2px solid var(--gold)';
+            }
+        </script>
         
         <!-- Checkout Modal -->
         <div class="modal-overlay" id="checkout-overlay">
@@ -177,7 +208,7 @@
             </div>
         </div>
         
-    <script>window.productsData = {"tronian-omegatron": {"handle": "tronian-omegatron", "brand": "Tronian", "title": "Tronian Omegatron", "vendor": "Tronian", "product_type": "Hardware", "tags": ["Vaporizer", "Hardware"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "tronian-omegatron", "sku": "tronian-omegatron", "option1_name": "Default", "option1_value": "Default Title", "price": 199.99, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/t/r/tronian_omegatron_tvape_gallery_1.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/t/r/tronian_omegatron_tvape_gallery_1.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/t/r/tronian_omegatron_tvape_gallery_1.jpg", "url": "https://thermodynesystems.com/wholesaler/us/vapes.html", "min_price": 199.99, "max_price": 199.99}};</script>
+    <script>window.productsData = {"tronian-omegatron": {"handle": "tronian-omegatron", "brand": "Tronian", "title": "Tronian Omegatron", "vendor": "Tronian", "product_type": "Hardware", "tags": ["Vaporizer", "Hardware"], "body_html": "<div class=\"techspec description\"> <div class=\"additional-attributes-wrapper table-wrapper\"><div class=\"title\"><span class=\"desc-title\">Description</span></div><div class=\"attribute-data\"><table class=\"data table additional-attributes\"><caption class=\"table-caption\">Description</caption><tbody><tr><th class=\"col label\" scope=\"row\"></th><td class=\"col data\"><p>The Tronian Omegatron represents a notable addition to the Vapor Cup market, offering a user-friendly system that ensures flavorful vapor. Distinguished by its streamlined design, this Vapor Cup sets itself apart by eliminating the need for intricate touch buttons. Instead, it employs a straightforward approach, allowing for effortless operation. The heating chamber, equipped with a specialized <strong>Glass Core</strong>, facilitates the transformation of solid essential oil into vapor with remarkable consistency through minuscule apertures, resulting in a consistently delightful vapor experience. Furthermore, the Omegatron boasts compatibility with universal threaded threads, ensuring convenient maintenance and seamless transitions between various solid essential extract. For those seeking a personalized touch, the cup can be enhanced by incorporating elements such as citrus peels or botanical, enabling a customized flavor profile. With these impressive attributes, the Omegatron guarantees an exceptional vaporizing experience that is both user-friendly and yields superior-quality vapor.</p><br/><a href=\"https://tronian.com/pub/media/tronian/updated/Omegatron_Manual_827756003877-1_0.pdf\" target=\"_blank\">Download Manual</a>\n</td></tr></tbody></table></div></div></div>", "options": [{"name": "Color", "values": ["Black"]}], "in_stock_variants": [{"variant_id": "tronian-omegatron-black", "sku": "TRO-BLA-TRONI", "option1_name": "Color", "option1_value": "Black", "price": 199.99, "available": true, "inventory_quantity": 50, "variant_image": "https://tronian.com/pub/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/t/r/tronian_omegatron_tvape_gallery_1_.jpg"}], "all_images": ["https://tronian.com/pub/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/t/r/tronian_omegatron_tvape_gallery_1_.jpg", "https://tronian.com/pub/media/mf_webp/jpg/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/t/r/tronian_omegatron_tvape_gallery_1_1.webp", "https://tronian.com/pub/media/mf_webp/jpg/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/t/r/tronian_omegatron_tvape_gallery_12.webp", "https://tronian.com/pub/media/mf_webp/jpg/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/t/r/tronian_omegatron_tvape_gallery_1_.webp", "https://tronian.com/pub/media/wysiwyg/TorontoVaporizer/ProductPages/InTheBox/TronianOmegatron/Tronian_Omegatron_In_the_Box_Banner.jpg"], "featured_image": "https://tronian.com/pub/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/t/r/tronian_omegatron_tvape_gallery_1_.jpg", "url": "https://thermodynesystems.com/wholesaler/us/vapes.html", "min_price": 199.99, "max_price": 199.99, "manufacturer_url": "https://tronian.com/tronian-omegatron.html"}};</script>
     <script src="../js/main.js"></script>
 </body>
 </html>

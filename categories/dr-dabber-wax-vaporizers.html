@@ -130,24 +130,55 @@
 
         <!-- Product Modal -->
         <div class="modal-overlay" id="modal-overlay">
-            <div class="modal">
-                <button class="modal-close" id="modal-close">&times;</button>
-                <div class="modal-left">
-                    <img src="" alt="Product" class="modal-main-img" id="m-img">
+            <div class="modal" style="max-width: 900px; padding:0; overflow:hidden;">
+                <button class="modal-close" id="modal-close" style="position:absolute; right:15px; top:15px; font-size:24px; background:none; border:none; cursor:pointer; z-index:100;">&times;</button>
+                <div class="modal-left" style="flex: 1.2; padding: 30px; border-right: 1px solid var(--border); background:#fdfdfd;">
+                    <div class="modal-gallery-main">
+                        <img src="" alt="Product" class="modal-main-img" id="m-img" style="height: 400px; width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="modal-gallery-thumbs" id="m-thumbs" style="display: flex; gap: 10px; margin-top: 15px; overflow-x: auto; padding-bottom: 5px;">
+                        <!-- Thumbnails injected here -->
+                    </div>
                 </div>
-                <div class="modal-right">
-                    <div class="modal-brand" id="m-brand">Brand</div>
-                    <h2 class="modal-title" id="m-title">Product Name</h2>
-                    <div class="modal-price" id="m-price">$0.00</div>
-                    <div class="modal-desc" id="m-desc"></div>
+                <div class="modal-right" style="flex: 1.3; padding: 30px; display:flex; flex-direction:column; max-height:80vh; overflow-y:auto;">
+                    <div class="modal-brand" id="m-brand" style="font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 5px;">Brand</div>
+                    <h2 class="modal-title" id="m-title" style="margin: 0 0 10px; font-size: 26px;">Product Name</h2>
+                    <div class="modal-price" id="m-price" style="font-size: 22px; font-weight: bold; color: var(--gold); margin-bottom: 20px;">$0.00</div>
                     
-                    <div class="variant-label" id="v-label">Options</div>
-                    <div class="swatch-group" id="swatches"></div>
+                    <div class="modal-tabs" style="display: flex; gap: 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px;">
+                        <span class="tab-link active" onclick="switchTab('desc', this)" style="cursor: pointer; font-weight: bold; border-bottom: 2px solid var(--gold); padding-bottom:8px; font-size:14px; text-transform:uppercase;">Details</span>
+                        <span class="tab-link" onclick="switchTab('specs', this)" style="cursor: pointer; font-weight: bold; padding-bottom:8px; font-size:14px; text-transform:uppercase;">Specs</span>
+                        <span class="tab-link" onclick="switchTab('resources', this)" style="cursor: pointer; font-weight: bold; padding-bottom:8px; font-size:14px; text-transform:uppercase;">Resources</span>
+                    </div>
                     
-                    <button class="btn modal-buy-btn" id="add-to-cart-btn">Add to Cart</button>
+                    <div class="tab-content" id="tab-desc" style="display: block; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div class="modal-desc" id="m-desc"></div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-specs" style="display: none; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div id="m-specs">No specifications available.</div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-resources" style="display: none; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div id="m-resources">No downloadable resources available.</div>
+                    </div>
+                    
+                    <div class="variant-label" id="v-label" style="font-weight:bold; font-size:12px; text-transform:uppercase; margin-bottom:10px;">Options</div>
+                    <div class="swatch-group" id="swatches" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;"></div>
+                    
+                    <button class="btn modal-buy-btn" id="add-to-cart-btn" style="width: 100%; padding: 15px; font-size: 16px; margin-top:auto;">Add to Cart</button>
                 </div>
             </div>
         </div>
+        
+        <script>
+            function switchTab(tabId, el) {
+                document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+                document.querySelectorAll('.tab-link').forEach(t => t.style.borderBottom = 'none');
+                document.getElementById('tab-' + tabId).style.display = 'block';
+                el.style.borderBottom = '2px solid var(--gold)';
+            }
+        </script>
         
         <!-- Checkout Modal -->
         <div class="modal-overlay" id="checkout-overlay">
@@ -177,7 +208,7 @@
             </div>
         </div>
         
-    <script>window.productsData = {"dr-dabber-xs": {"handle": "dr-dabber-xs", "brand": "Dr. Dabber", "title": "Dr. Dabber XS", "vendor": "Dr. Dabber", "product_type": "Wax Vaporizers", "tags": ["Vaporizer", "Wax Vaporizers"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "dr-dabber-xs", "sku": "dr-dabber-xs", "option1_name": "Default", "option1_value": "Default Title", "price": 159.95, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber-xs_tvape_gallery_1.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber-xs_tvape_gallery_1.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber-xs_tvape_gallery_1.jpg", "url": "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html", "min_price": 159.95, "max_price": 159.95}, "dr-dabber-switch-2": {"handle": "dr-dabber-switch-2", "brand": "Dr. Dabber", "title": "Dr. Dabber Switch 2", "vendor": "Dr. Dabber", "product_type": "Wax Vaporizers", "tags": ["Vaporizer", "Wax Vaporizers"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "dr-dabber-switch-2", "sku": "dr-dabber-switch-2", "option1_name": "Default", "option1_value": "Default Title", "price": 420.0, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber_switch_2_e_rig_front_view_gallery.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber_switch_2_e_rig_front_view_gallery.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber_switch_2_e_rig_front_view_gallery.jpg", "url": "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html", "min_price": 420.0, "max_price": 420.0}, "dr-dabber-ghost-2": {"handle": "dr-dabber-ghost-2", "brand": "Dr. Dabber", "title": "Dr. Dabber Ghost 2", "vendor": "Dr. Dabber", "product_type": "Wax Vaporizers", "tags": ["Vaporizer", "Wax Vaporizers"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "dr-dabber-ghost-2", "sku": "dr-dabber-ghost-2", "option1_name": "Default", "option1_value": "Default Title", "price": 119.95, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/drd_ghost2_dry_herb_back_view.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/drd_ghost2_dry_herb_back_view.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/drd_ghost2_dry_herb_back_view.jpg", "url": "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html", "min_price": 119.95, "max_price": 119.95}};</script>
+    <script>window.productsData = {"dr-dabber-xs": {"handle": "dr-dabber-xs", "brand": "Dr. Dabber", "title": "Dr. Dabber XS", "vendor": "Dr. Dabber", "product_type": "Wax Vaporizers", "tags": ["Vaporizer", "Wax Vaporizers"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "dr-dabber-xs", "sku": "dr-dabber-xs", "option1_name": "Default", "option1_value": "Default Title", "price": 159.95, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber-xs_tvape_gallery_1.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber-xs_tvape_gallery_1.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber-xs_tvape_gallery_1.jpg", "url": "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html", "min_price": 159.95, "max_price": 159.95, "resources": []}, "dr-dabber-switch-2": {"handle": "dr-dabber-switch-2", "brand": "Dr. Dabber", "title": "Dr. Dabber Switch 2", "vendor": "Dr. Dabber", "product_type": "Wax Vaporizers", "tags": ["Vaporizer", "Wax Vaporizers"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "dr-dabber-switch-2", "sku": "dr-dabber-switch-2", "option1_name": "Default", "option1_value": "Default Title", "price": 420.0, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber_switch_2_e_rig_front_view_gallery.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber_switch_2_e_rig_front_view_gallery.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/dr.dabber_switch_2_e_rig_front_view_gallery.jpg", "url": "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html", "min_price": 420.0, "max_price": 420.0, "resources": []}, "dr-dabber-ghost-2": {"handle": "dr-dabber-ghost-2", "brand": "Dr. Dabber", "title": "Dr. Dabber Ghost 2", "vendor": "Dr. Dabber", "product_type": "Wax Vaporizers", "tags": ["Vaporizer", "Wax Vaporizers"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "dr-dabber-ghost-2", "sku": "dr-dabber-ghost-2", "option1_name": "Default", "option1_value": "Default Title", "price": 119.95, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/drd_ghost2_dry_herb_back_view.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/drd_ghost2_dry_herb_back_view.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/d/r/drd_ghost2_dry_herb_back_view.jpg", "url": "https://thermodynesystems.com/wholesaler/us/wax-vaporizers.html", "min_price": 119.95, "max_price": 119.95}};</script>
     <script src="../js/main.js"></script>
 </body>
 </html>

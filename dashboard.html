@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thermodyne CMS Dashboard</title>
+    <style>
+        :root { --bg: #f9f9f9; --primary: #111; --gold: #d4af37; --border: #eaeaea; }
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; display: flex; height: 100vh; background: var(--bg); color: var(--primary); }
+        .sidebar { width: 220px; background: #fff; border-right: 1px solid var(--border); padding: 20px; }
+        .sidebar h2 { margin: 0 0 30px; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); }
+        .nav-item { display: block; padding: 10px; margin-bottom: 10px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .nav-item:hover, .nav-item.active { background: #eee; }
+        .main { flex: 1; padding: 40px; overflow-y: auto; }
+        h1 { margin-top: 0; }
+        
+        .card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+        th { text-transform: uppercase; font-size: 11px; letter-spacing: 1px; color: #888; }
+        
+        .img-thumb { width: 40px; height: 40px; object-fit: contain; border-radius: 4px; border: 1px solid var(--border); }
+        input[type="text"], input[type="number"] { padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 100px; }
+        .btn { padding: 10px 20px; background: var(--gold); color: #000; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 12px; }
+        .btn:hover { background: #111; color: #fff; }
+        
+        /* Toggle Switch */
+        .switch { position: relative; display: inline-block; width: 40px; height: 24px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: var(--gold); }
+        input:checked + .slider:before { transform: translateX(16px); }
+        
+        .toast { position: fixed; bottom: 20px; right: 20px; background: #222; color: #fff; padding: 15px 25px; border-radius: 8px; font-weight: bold; display: none; }
+        
+        #bundler-view { display: none; }
+        .bundle-grid { display: flex; gap: 30px; }
+        .bundle-list { flex: 1; border: 1px solid var(--border); height: 500px; overflow-y: auto; background: #fff; border-radius: 8px; padding: 10px; }
+        .bundle-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; }
+        .bundle-item:hover { background: #fafafa; }
+        .bundle-form { flex: 1; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+        .bundle-form label { display: block; font-size: 12px; font-weight: bold; text-transform: uppercase; margin: 15px 0 5px; }
+        .bundle-form input { width: 100%; box-sizing: border-box; }
+        
+        .child-item { display: flex; justify-content: space-between; padding: 10px; background: #f9f9f9; margin-bottom: 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Thermodyne</h2>
+        <div class="nav-item active" onclick="showView('inventory')">📦 Inventory</div>
+        <div class="nav-item" onclick="showView('bundler')">🎁 The Bundler</div>
+    </div>
+    
+    <div class="main">
+        <div id="inventory-view" class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Inventory & Pricing</h1>
+                <button class="btn" onclick="saveAll()">Sync Storefront</button>
+            </div>
+            
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product Title</th>
+                        <th>Handle</th>
+                        <th>Price (MSRP)</th>
+                        <th>On Sale</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="bundler-view" class="card">
+            <h1>The Bundler Engine</h1>
+            <p style="color: #666; margin-bottom: 30px;">Select child items from the left to construct a new promotional bundle on the right.</p>
+            <div class="bundle-grid">
+                <div class="bundle-list" id="bundle-inventory">
+                    <!-- Inventory items -->
+                </div>
+                <div class="bundle-form">
+                    <h3>Configure Bundle</h3>
+                    <label>Bundle Title</label>
+                    <input type="text" id="b_title" placeholder="e.g. The Ultimate Starter Kit">
+                    
+                    <label>Bundle Handle (URL)</label>
+                    <input type="text" id="b_handle" placeholder="e.g. bundle-ultimate-starter-kit">
+                    
+                    <label>Bundle Price ($)</label>
+                    <input type="number" id="b_price" placeholder="249.99">
+                    
+                    <label>Image URL</label>
+                    <input type="text" id="b_image" placeholder="https://...">
+                    
+                    <label>Included Items</label>
+                    <div id="b_children" style="min-height: 100px; border: 1px dashed #ccc; padding: 10px; border-radius: 4px;"></div>
+                    
+                    <button class="btn" style="width: 100%; margin-top: 20px;" onclick="publishBundle()">Publish Bundle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast">Storefront Rebuilt Successfully!</div>
+
+    <script>
+        let products = [];
+        let bundleChildren = [];
+
+        function showView(view) {
+            document.getElementById('inventory-view').style.display = view === 'inventory' ? 'block' : 'none';
+            document.getElementById('bundler-view').style.display = view === 'bundler' ? 'block' : 'none';
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.style.display = 'block';
+            setTimeout(() => t.style.display = 'none', 3000);
+        }
+
+        async function loadData() {
+            const res = await fetch('Thermodyne_Products.json');
+            const data = await res.json();
+            products = data.products || [];
+            renderInventory();
+            renderBundlerList();
+        }
+        
+        function renderInventory() {
+            const tbody = document.getElementById('inventory-body');
+            tbody.innerHTML = '';
+            
+            products.forEach((p, i) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><img src="${p.featured_image || ''}" class="img-thumb"></td>
+                    <td style="font-weight: bold;">${p.title}</td>
+                    <td style="color: #888;">${p.handle}</td>
+                    <td>$ <input type="number" value="${p.min_price || 0}" id="price-${i}" onchange="markDirty(this)"></td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" id="sale-${i}" ${p.on_sale ? 'checked' : ''} onchange="markDirty(this)">
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+        
+        function markDirty(el) {
+            el.closest('tr').style.backgroundColor = '#f0fdf4'; // Light green
+        }
+
+        async function saveAll() {
+            const updates = [];
+            products.forEach((p, i) => {
+                const priceVal = parseFloat(document.getElementById(`price-${i}`).value);
+                const saleVal = document.getElementById(`sale-${i}`).checked;
+                
+                if(p.min_price !== priceVal || p.on_sale !== saleVal) {
+                    p.min_price = priceVal;
+                    p.max_price = priceVal;
+                    p.on_sale = saleVal;
+                    if(p.in_stock_variants && p.in_stock_variants.length > 0) {
+                        p.in_stock_variants[0].price = priceVal;
+                    }
+                    updates.push(p);
+                }
+            });
+            
+            if(updates.length === 0) {
+                showToast("No changes detected.");
+                return;
+            }
+            
+            const res = await fetch('/api/save_products', {
+                method: 'POST',
+                body: JSON.stringify(updates),
+                headers: {'Content-Type': 'application/json'}
+            });
+            
+            if(res.ok) {
+                document.querySelectorAll('tr').forEach(tr => tr.style.backgroundColor = '');
+                showToast("Live Storefront Rebuilt & Synced!");
+            }
+        }
+        
+        function renderBundlerList() {
+            const list = document.getElementById('bundle-inventory');
+            list.innerHTML = '';
+            products.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'bundle-item';
+                div.innerHTML = `<img src="${p.featured_image}" class="img-thumb" style="margin-right:10px;"> 
+                                 <div style="flex:1;"><strong>${p.title}</strong><br><small>$${p.min_price}</small></div>
+                                 <button class="btn" style="padding: 5px 10px; font-size: 10px;" onclick="addToBundle('${p.handle}', '${p.title.replace(/'/g, "\\'")}')">+</button>`;
+                list.appendChild(div);
+            });
+        }
+        
+        function addToBundle(handle, title) {
+            bundleChildren.push({handle, title, qty: 1});
+            renderChildren();
+        }
+        
+        function renderChildren() {
+            const container = document.getElementById('b_children');
+            container.innerHTML = '';
+            bundleChildren.forEach(c => {
+                container.innerHTML += `<div class="child-item"><span>${c.title}</span> <span>Qty: ${c.qty}</span></div>`;
+            });
+        }
+        
+        async function publishBundle() {
+            const payload = {
+                title: document.getElementById('b_title').value,
+                handle: document.getElementById('b_handle').value,
+                price: parseFloat(document.getElementById('b_price').value),
+                featured_image: document.getElementById('b_image').value,
+                children: bundleChildren
+            };
+            
+            const res = await fetch('/api/create_bundle', {
+                method: 'POST',
+                body: JSON.stringify(payload),
+                headers: {'Content-Type': 'application/json'}
+            });
+            
+            if(res.ok) {
+                showToast("Bundle Published to Live Storefront!");
+                bundleChildren = [];
+                renderChildren();
+                document.getElementById('b_title').value = '';
+                document.getElementById('b_handle').value = '';
+                document.getElementById('b_price').value = '';
+                document.getElementById('b_image').value = '';
+            }
+        }
+
+        window.onload = loadData;
+    </script>
+</body>
+</html>

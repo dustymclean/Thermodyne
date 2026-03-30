@@ -130,24 +130,55 @@
 
         <!-- Product Modal -->
         <div class="modal-overlay" id="modal-overlay">
-            <div class="modal">
-                <button class="modal-close" id="modal-close">&times;</button>
-                <div class="modal-left">
-                    <img src="" alt="Product" class="modal-main-img" id="m-img">
+            <div class="modal" style="max-width: 900px; padding:0; overflow:hidden;">
+                <button class="modal-close" id="modal-close" style="position:absolute; right:15px; top:15px; font-size:24px; background:none; border:none; cursor:pointer; z-index:100;">&times;</button>
+                <div class="modal-left" style="flex: 1.2; padding: 30px; border-right: 1px solid var(--border); background:#fdfdfd;">
+                    <div class="modal-gallery-main">
+                        <img src="" alt="Product" class="modal-main-img" id="m-img" style="height: 400px; width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="modal-gallery-thumbs" id="m-thumbs" style="display: flex; gap: 10px; margin-top: 15px; overflow-x: auto; padding-bottom: 5px;">
+                        <!-- Thumbnails injected here -->
+                    </div>
                 </div>
-                <div class="modal-right">
-                    <div class="modal-brand" id="m-brand">Brand</div>
-                    <h2 class="modal-title" id="m-title">Product Name</h2>
-                    <div class="modal-price" id="m-price">$0.00</div>
-                    <div class="modal-desc" id="m-desc"></div>
+                <div class="modal-right" style="flex: 1.3; padding: 30px; display:flex; flex-direction:column; max-height:80vh; overflow-y:auto;">
+                    <div class="modal-brand" id="m-brand" style="font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 5px;">Brand</div>
+                    <h2 class="modal-title" id="m-title" style="margin: 0 0 10px; font-size: 26px;">Product Name</h2>
+                    <div class="modal-price" id="m-price" style="font-size: 22px; font-weight: bold; color: var(--gold); margin-bottom: 20px;">$0.00</div>
                     
-                    <div class="variant-label" id="v-label">Options</div>
-                    <div class="swatch-group" id="swatches"></div>
+                    <div class="modal-tabs" style="display: flex; gap: 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px;">
+                        <span class="tab-link active" onclick="switchTab('desc', this)" style="cursor: pointer; font-weight: bold; border-bottom: 2px solid var(--gold); padding-bottom:8px; font-size:14px; text-transform:uppercase;">Details</span>
+                        <span class="tab-link" onclick="switchTab('specs', this)" style="cursor: pointer; font-weight: bold; padding-bottom:8px; font-size:14px; text-transform:uppercase;">Specs</span>
+                        <span class="tab-link" onclick="switchTab('resources', this)" style="cursor: pointer; font-weight: bold; padding-bottom:8px; font-size:14px; text-transform:uppercase;">Resources</span>
+                    </div>
                     
-                    <button class="btn modal-buy-btn" id="add-to-cart-btn">Add to Cart</button>
+                    <div class="tab-content" id="tab-desc" style="display: block; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div class="modal-desc" id="m-desc"></div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-specs" style="display: none; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div id="m-specs">No specifications available.</div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-resources" style="display: none; font-size: 14px; line-height: 1.6; color:#444; flex-grow:1; margin-bottom:20px;">
+                        <div id="m-resources">No downloadable resources available.</div>
+                    </div>
+                    
+                    <div class="variant-label" id="v-label" style="font-weight:bold; font-size:12px; text-transform:uppercase; margin-bottom:10px;">Options</div>
+                    <div class="swatch-group" id="swatches" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;"></div>
+                    
+                    <button class="btn modal-buy-btn" id="add-to-cart-btn" style="width: 100%; padding: 15px; font-size: 16px; margin-top:auto;">Add to Cart</button>
                 </div>
             </div>
         </div>
+        
+        <script>
+            function switchTab(tabId, el) {
+                document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+                document.querySelectorAll('.tab-link').forEach(t => t.style.borderBottom = 'none');
+                document.getElementById('tab-' + tabId).style.display = 'block';
+                el.style.borderBottom = '2px solid var(--gold)';
+            }
+        </script>
         
         <!-- Checkout Modal -->
         <div class="modal-overlay" id="checkout-overlay">
@@ -177,7 +208,7 @@
             </div>
         </div>
         
-    <script>window.productsData = {"zeus-ion": {"handle": "zeus-ion", "brand": "Zeus", "title": "Zeus Ion", "vendor": "Zeus", "product_type": "Hardware", "tags": ["Vaporizer", "Hardware"], "body_html": "", "options": [{"name": "Default", "values": ["Default Title"]}], "in_stock_variants": [{"variant_id": "zeus-ion", "sku": "zeus-ion", "option1_name": "Default", "option1_value": "Default Title", "price": 59.99, "available": true, "inventory_quantity": 10, "variant_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/z/e/zeus_ion_510_battery_colors_with_tronpod_front_viewb.jpg"}], "all_images": ["https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/z/e/zeus_ion_510_battery_colors_with_tronpod_front_viewb.jpg"], "featured_image": "https://thermodynesystems.com/wholesaler/us/pub/media/catalog/product/cache/eb9bfee0905bbd9a06d3d129ebf1e71b/z/e/zeus_ion_510_battery_colors_with_tronpod_front_viewb.jpg", "url": "https://thermodynesystems.com/wholesaler/us/vapes.html", "min_price": 59.99, "max_price": 59.99}};</script>
+    <script>window.productsData = {"zeus-ion": {"handle": "zeus-ion", "brand": "Zeus", "title": "Zeus Ion", "vendor": "Zeus", "product_type": "Hardware", "tags": ["Vaporizer", "Hardware"], "body_html": "<section class=\"configurable-section description border-top\"><div class=\"section-inner wrapper02\"><p><span style=\"font-weight: 400;\">The Zeus Ion is a universal threaded Battery that makes on-the-go vaping a smooth and simple process. This universal threaded battery is a small and compact device that has many useful features. It keeps its threaded attachment hidden inside its base, making only the mouthpiece visible. This makes it discreet and gives it a fresh look when using a new threaded attachment. Despite its small size, the Ion has more than enough power to keep you satisfied during a full day of vaping on the move.\u00a0</span></p>\n<p>\u00a0</p>\n<p><span style=\"font-weight: 400;\">The Ion has a USB-C Charger that can fully charge the device in only 60 minutes. It comes with 2 magnetic adapters, making it compatible with different threaded attachment. The Ion's universal threaded battery can accommodate threaded attachment ranging from 0.5 ml to 1.2 ml and up to 11.5mm in diameter.</span></p>\n<p>\u00a0</p>\n<p><span style=\"font-weight: 400;\">Easy to use is an understatement when considering that the Ion comes with 4 Multi-Color LEDs that indicate your 4 different temperature settings that are on the side of the unit. Cycling through these settings is easy, thanks to the single-button operation method. With the button, you can also these settings, activate the 15-second preheat mode and, of course, turn the device on and off.</span></p>\n<p><a href=\"pub/media/zeus_products/updated/ZEUS_Ion_Manual_82775600441-1.0-QSM.pdf\" rel=\"noopener\" target=\"_blank\">Download English Manual</a></p></div></section>", "options": [{"name": "Color", "values": ["Black/Gold", "White/Gold", "Black/Gunmetal"]}], "in_stock_variants": [{"variant_id": "zeus-ion-black/gold", "sku": "ZEU-BLA-ZEUS-", "option1_name": "Color", "option1_value": "Black/Gold", "price": 59.99, "available": true, "inventory_quantity": 50, "variant_image": "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT4-Silhouette.png"}, {"variant_id": "zeus-ion-white/gold", "sku": "ZEU-WHI-ZEUS-", "option1_name": "Color", "option1_value": "White/Gold", "price": 59.99, "available": true, "inventory_quantity": 50, "variant_image": "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT4-Silhouette.png"}, {"variant_id": "zeus-ion-black/gunmetal", "sku": "ZEU-BLA-ZEUS-", "option1_name": "Color", "option1_value": "Black/Gunmetal", "price": 59.99, "available": true, "inventory_quantity": 50, "variant_image": "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT4-Silhouette.png"}], "all_images": ["https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT4-Silhouette.png", "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-S2-Silhouette.png", "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Ion-Silhouette.png", "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT-Arcpods-Dry-Herb-Silhouette.png", "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT-Arcpods-Wax-Silhouette.png", "https://zeusarsenal.com/pub/media/wysiwyg/Zeus_Arcpod_Silhouette__.png", "https://zeusarsenal.com/pub/media/wysiwyg/Xtruder-Silhouette_A.png", "https://zeusarsenal.com/pub/media/wysiwyg/Zeus_Bolt_2_Silhouette.png", "https://zeusarsenal.com/pub/media/wysiwyg/Zeus_Bolt_XL_Silhouette.png", "https://zeusarsenal.com/pub/media/catalog/product/cache/933bc990b18091fc4b495afcc1d0588a/z/e/zeus-ion_gallery_2_1_1.jpg"], "featured_image": "https://zeusarsenal.com/pub/media/wysiwyg/Menu/zeus/Zeus-Arc-GT4-Silhouette.png", "url": "https://thermodynesystems.com/wholesaler/us/vapes.html", "min_price": 59.99, "max_price": 59.99, "manufacturer_url": "https://zeusarsenal.com/zeus-ion.html", "resources": []}};</script>
     <script src="../js/main.js"></script>
 </body>
 </html>
